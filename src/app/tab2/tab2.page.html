@@ -9,11 +9,25 @@
 <ion-content>
   <ion-grid>
     <ion-row>
-      <ion-col size="6" *ngFor="let photo of photoService.photos">
+      <ion-col size-sm="6" *ngFor="let photo of photoService.photos">
         <img [src]="photo.data" />
       </ion-col>
     </ion-row>
   </ion-grid>
+
+<ion-grid class="basic-grid" padding>
+  <ion-row class="basic-row" padding>
+    <ion-col class="basic-column" size-xs="12" size-sm="6" size-m="4" size-l="3" padding>
+      column 1
+    </ion-col>
+    <ion-col class="basic-column2" size-xs="12" size-sm="6" size-m="4" size-l="3" padding>
+      column 2
+    </ion-col>
+    <ion-col class="basic-column3" size-xs="12" size-sm="6" size-m="4" size-l="3" padding>
+      column 3
+    </ion-col>
+  </ion-row>
+</ion-grid>
 
 <ion-fab vertical="bottom" horizontal="center" slot="fixed">
     <ion-fab-button (click)="this.photoService.takePicture()">
